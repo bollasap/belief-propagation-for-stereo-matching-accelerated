@@ -34,7 +34,7 @@ int computeEnergy();
 int main()
 {
 	levels = 16;
-	iterations = 5;
+	iterations = 40;
 	lambda = 5;
 	truncationThreshold = 2;
 
@@ -81,7 +81,7 @@ int main()
 	// Start iterations
 	for (int iter = 1; iter <= iterations; iter++)
 	{
-		// Update messages
+		// Update messages (Accelerated)
 		for (int y = 0; y < height; y++)
 			for (int x = 0; x < width - 1; x++)
 				sendMessageRight(x, y);
